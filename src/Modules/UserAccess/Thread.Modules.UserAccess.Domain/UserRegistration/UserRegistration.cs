@@ -12,6 +12,8 @@ public sealed class UserRegistration : Entity, IAggregateRoot
         PasswordHash = passwordHash;
         RegisteredOn = DateTime.UtcNow;
         Status = RegistrationStatus.WaitToConfirm;
+        
+        AddDomainEvent(new NewUserRegisteredDomainEvent(Id, Email));
     }
 
     public string Email { get; init; }

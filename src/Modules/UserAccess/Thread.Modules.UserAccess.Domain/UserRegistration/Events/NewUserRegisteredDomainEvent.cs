@@ -2,10 +2,12 @@
 
 public sealed class NewUserRegisteredDomainEvent : IDomainEvent
 {
-    public NewUserRegisteredDomainEvent(Guid registrationId)
+    public NewUserRegisteredDomainEvent(Guid registrationId, string userEmail)
     {
         RegistrationId = registrationId;
+        UserEmail = userEmail;
     }
 
     public Guid RegistrationId { get; }
+    public string UserEmail { get; }
 }
