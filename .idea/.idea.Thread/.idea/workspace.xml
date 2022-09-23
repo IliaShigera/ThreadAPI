@@ -6,7 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf9b8181-54a7-46ea-ac13-02e169348d0d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Thread/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Thread/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/UserAccess/Thread.Modules.UserAccess.Application/Configurations/GlobalUsings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Modules/UserAccess/Thread.Modules.UserAccess.Application/Contracts/IUserAccessDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/UserAccess/Thread.Modules.UserAccess.Application/Thread.Modules.UserAccess.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/UserAccess/Thread.Modules.UserAccess.Application/Thread.Modules.UserAccess.Application.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1663954519411</updated>
-      <workItem from="1663954519413" duration="4356000" />
+      <workItem from="1663954519413" duration="4828000" />
     </task>
     <servers />
   </component>
