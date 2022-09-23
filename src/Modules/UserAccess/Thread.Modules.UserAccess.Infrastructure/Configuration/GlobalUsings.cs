@@ -4,6 +4,7 @@ global using Thread.Modules.UserAccess.Application.Contracts;
 global using Thread.Modules.UserAccess.Domain.UserRegistration;
 global using Thread.Modules.UserAccess.Infrastructure.Domain;
 global using Thread.Modules.UserAccess.Infrastructure.Persistence;
+global using Thread.Modules.UserAccess.Infrastructure.Application;
 
 // others 
 global using Microsoft.EntityFrameworkCore;
@@ -13,3 +14,4 @@ global using System.Reflection;
 global using Microsoft.Extensions.Configuration;
 global using Microsoft.Extensions.DependencyInjection;
 global using MediatR;
+global using System.Security.Cryptography;

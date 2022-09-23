@@ -1,6 +1,4 @@
-﻿
-
-namespace Thread.Modules.UserAccess.Infrastructure.Configuration;
+﻿namespace Thread.Modules.UserAccess.Infrastructure.Configuration;
 
 public static class DependencyInjection
 {
@@ -8,6 +6,7 @@ public static class DependencyInjection
     {
         services.AddScoped<IUniqUser, UniqueUser>();
         services.AddScoped<IUserAccessDbContext, UserAccessDbContext>();
+        services.AddScoped<IPasswordManager, PasswordManager>();
 
         var connection = configuration.GetConnectionString("UserAccess");
         services.AddDbContext<UserAccessDbContext>(options => options.UseSqlServer(connection));
