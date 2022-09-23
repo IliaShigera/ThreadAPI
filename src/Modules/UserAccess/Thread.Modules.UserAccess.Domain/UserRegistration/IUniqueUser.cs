@@ -1,6 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Domain.UserRegistration;
 
-public interface IUniqUser
+public interface IUniqueUser
 {
     bool IsUniqEmail(string email);
 }

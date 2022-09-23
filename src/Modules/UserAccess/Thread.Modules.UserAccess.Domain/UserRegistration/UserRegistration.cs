@@ -4,9 +4,9 @@ public sealed class UserRegistration : Entity, IAggregateRoot
 {
     private UserRegistration() { }
 
-    private UserRegistration(string email, string passwordHash, IUniqUser uniqUser)
+    private UserRegistration(string email, string passwordHash, IUniqueUser uniqueUser)
     {
-        CheckRule(new RegistrationEmailShouldBeUniqueDomainRule(email, uniqUser));
+        CheckRule(new RegistrationEmailShouldBeUniqueDomainRule(email, uniqueUser));
 
         Email = email;
         PasswordHash = passwordHash;
@@ -19,8 +19,8 @@ public sealed class UserRegistration : Entity, IAggregateRoot
     public DateTime RegisteredOn { get; init; }
     public RegistrationStatus Status { get; private set; }
 
-    public static UserRegistration RegisterNewUser(string email, string passwordHash, IUniqUser uniqUser) =>
-        new(email, passwordHash, uniqUser);
+    public static UserRegistration RegisterNewUser(string email, string passwordHash, IUniqueUser uniqueUser) =>
+        new(email, passwordHash, uniqueUser);
 
     public void Confirm()
     {

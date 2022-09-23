@@ -4,7 +4,7 @@ public static class DependencyInjection
 {
     public static void AddUserAccessModule(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddScoped<IUniqUser, UniqueUser>();
+        services.AddScoped<IUniqueUser, UniqueUser>();
         services.AddScoped<IUserAccessDbContext, UserAccessDbContext>();
         services.AddScoped<IPasswordManager, PasswordManager>();
 
