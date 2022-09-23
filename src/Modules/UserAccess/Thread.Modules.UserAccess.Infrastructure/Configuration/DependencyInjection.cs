@@ -1,4 +1,6 @@
-﻿namespace Thread.Modules.UserAccess.Infrastructure.Configuration;
+﻿
+
+namespace Thread.Modules.UserAccess.Infrastructure.Configuration;
 
 public static class DependencyInjection
 {
@@ -9,5 +11,7 @@ public static class DependencyInjection
 
         var connection = configuration.GetConnectionString("UserAccess");
         services.AddDbContext<UserAccessDbContext>(options => options.UseSqlServer(connection));
+
+        services.AddMediatR(Assembly.Load("Thread.Modules.UserAccess.Application"));
     }
 }
