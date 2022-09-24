@@ -7,6 +7,7 @@ global using Thread.Modules.UserAccess.Infrastructure.Persistence;
 global using Thread.Modules.UserAccess.Infrastructure.Application;
 global using Thread.Modules.UserAccess.Domain.Models;
 global using Thread.Modules.UserAccess.Infrastructure.Configuration;
+global using Thread.Modules.UserAccess.Application.Registration;
 
 // others 
 global using Microsoft.EntityFrameworkCore;

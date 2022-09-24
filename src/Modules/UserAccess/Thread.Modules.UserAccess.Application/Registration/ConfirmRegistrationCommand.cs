@@ -1,8 +1,6 @@
-﻿using Thread.Modules.UserAccess.Application.Exceptions;
+﻿namespace Thread.Modules.UserAccess.Application.Registration;
 
-namespace Thread.Modules.UserAccess.Application.Registration;
-
-internal sealed class ConfirmRegistrationCommand : ICommand
+public sealed class ConfirmRegistrationCommand : ICommand
 {
     public ConfirmRegistrationCommand(Guid registrationId)
     {

@@ -1,6 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Application.Registration;
 
-internal sealed class RegisterUserCommand : ICommand
+public sealed class RegisterUserCommand : ICommand
 {
     public RegisterUserCommand(string email, string password)
     {

@@ -8,12 +8,15 @@ public static class DependencyInjection
         services.AddScoped<IUserAccessDbContext, UserAccessDbContext>();
         services.AddScoped<IPasswordManager, PasswordManager>();
         services.AddScoped<IEmailSender, EmailSender>();
-        
+        services.AddScoped<IUserAccessModule, UserAccessModule>();
+
         services.AddSingleton(configuration.GetSection(SmtpConfiguration.SECTION_NAME).Get<SmtpConfiguration>());
 
         var connection = configuration.GetConnectionString("UserAccess");
         services.AddDbContext<UserAccessDbContext>(options => options.UseSqlServer(connection));
 
-        services.AddMediatR(Assembly.Load("Thread.Modules.UserAccess.Application"));
+        services.AddMediatR(
+            Assembly.Load("Thread.Modules.UserAccess.Application"),
+            Assembly.Load("Thread.Modules.UserAccess.Infrastructure"));
     }
 }
