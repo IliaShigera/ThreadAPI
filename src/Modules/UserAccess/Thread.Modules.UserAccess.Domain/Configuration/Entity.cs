@@ -10,7 +10,7 @@ public abstract class Entity
 
     protected void AddDomainEvent(IDomainEvent @event) => _domainEvents.Add(@event);
     
-    protected void ClearAllDomainEvents() => _domainEvents.Clear();
+    public void ClearAllDomainEvents() => _domainEvents.Clear();
     
     protected void CheckRule(IDomainRule rule)
     {

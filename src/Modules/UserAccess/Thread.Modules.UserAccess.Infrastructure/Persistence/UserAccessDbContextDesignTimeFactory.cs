@@ -9,6 +9,6 @@ internal sealed class UserAccessDbContextDesignTimeFactory : IDesignTimeDbContex
         var optionsBuilder = new DbContextOptionsBuilder<UserAccessDbContext>();
         optionsBuilder.UseSqlServer(connection);
 
-        return new UserAccessDbContext(optionsBuilder.Options);
+        return new UserAccessDbContext(optionsBuilder.Options, default);
     }
 }

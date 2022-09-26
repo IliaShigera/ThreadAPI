@@ -9,6 +9,7 @@ public static class DependencyInjection
         services.AddScoped<IPasswordManager, PasswordManager>();
         services.AddScoped<IEmailSender, EmailSender>();
         services.AddScoped<IUserAccessModule, UserAccessModule>();
+        services.AddScoped<IDomainEventsDispatcher, DomainEventsDispatcher.DomainEventsDispatcher>();
 
         services.AddSingleton(configuration.GetSection(SmtpConfiguration.SECTION_NAME).Get<SmtpConfiguration>());
 
