@@ -1,8 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Application.Contracts;
 
-public interface IUserAccessDbContext
+public interface IUserAccessDbContext : IDbContext
 {
     DbSet<UserRegistration> Registrations { get; }
-
-    Task CommitAsync(CancellationToken cancellationToken = default);
 }

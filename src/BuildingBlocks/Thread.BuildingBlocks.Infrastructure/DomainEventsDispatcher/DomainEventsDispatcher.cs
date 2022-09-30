@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Infrastructure.DomainEventsDispatcher;
+﻿namespace Thread.BuildingBlocks.Infrastructure.DomainEventsDispatcher;
 
 internal sealed class DomainEventsDispatcher : IDomainEventsDispatcher
 {
@@ -9,7 +9,7 @@ internal sealed class DomainEventsDispatcher : IDomainEventsDispatcher
         _mediator = mediator;
     }
 
-    public async Task DispatchDomainEventsAsync(UserAccessDbContext dbContext, CancellationToken cancellationToken = default)
+    public async Task DispatchDomainEventsAsync(DbContext dbContext, CancellationToken cancellationToken = default)
     {
         var domainEvents = ListDomainEvents(dbContext);
 
@@ -21,7 +21,7 @@ internal sealed class DomainEventsDispatcher : IDomainEventsDispatcher
         ClearAllDomainEvents(dbContext);
     }
     
-    private IReadOnlyList<IDomainEvent> ListDomainEvents(UserAccessDbContext dbContext)
+    private IReadOnlyList<IDomainEvent> ListDomainEvents(DbContext dbContext)
     {
         var entries = dbContext.ChangeTracker
             .Entries<Entity>()
@@ -34,7 +34,7 @@ internal sealed class DomainEventsDispatcher : IDomainEventsDispatcher
             .AsReadOnly();
     }
 
-    private void ClearAllDomainEvents(UserAccessDbContext dbContext)
+    private void ClearAllDomainEvents(DbContext dbContext)
     {
         var entries = dbContext.ChangeTracker
             .Entries<Entity>()

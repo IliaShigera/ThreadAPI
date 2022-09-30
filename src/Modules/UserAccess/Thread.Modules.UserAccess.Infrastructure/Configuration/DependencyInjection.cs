@@ -7,11 +7,7 @@ public static class DependencyInjection
         services.AddScoped<IUniqueUser, UniqueUser>();
         services.AddScoped<IUserAccessDbContext, UserAccessDbContext>();
         services.AddScoped<IPasswordManager, PasswordManager>();
-        services.AddScoped<IEmailSender, EmailSender>();
         services.AddScoped<IUserAccessModule, UserAccessModule>();
-        services.AddScoped<IDomainEventsDispatcher, DomainEventsDispatcher.DomainEventsDispatcher>();
-
-        services.AddSingleton(configuration.GetSection(SmtpConfiguration.SECTION_NAME).Get<SmtpConfiguration>());
 
         var connection = configuration.GetConnectionString("UserAccess");
         services.AddDbContext<UserAccessDbContext>(options => options.UseSqlServer(connection));

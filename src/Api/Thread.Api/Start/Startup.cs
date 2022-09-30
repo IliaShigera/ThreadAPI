@@ -1,4 +1,6 @@
-﻿namespace Thread.Api.Start;
+﻿
+
+namespace Thread.Api.Start;
 
 internal static class Startup
 {
@@ -23,7 +25,8 @@ internal static class Startup
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
-
+        
+        services.AddBuildingBlocks(configuration);
         services.AddUserAccessModule(configuration);
     }
 

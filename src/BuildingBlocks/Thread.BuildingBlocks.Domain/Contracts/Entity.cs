@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Domain.Configuration;
+﻿namespace Thread.BuildingBlocks.Domain.Contracts;
 
 public abstract class Entity
 {

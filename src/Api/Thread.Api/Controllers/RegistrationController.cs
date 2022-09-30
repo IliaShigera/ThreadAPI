@@ -1,6 +1,4 @@
-﻿using Thread.Modules.UserAccess.Application.Exceptions;
-
-namespace Thread.Api.Controllers;
+﻿namespace Thread.Api.Controllers;
 
 [ApiController]
 [AllowAnonymous]

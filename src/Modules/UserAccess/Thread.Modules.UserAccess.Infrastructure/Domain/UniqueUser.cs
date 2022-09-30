@@ -1,6 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Infrastructure.Domain;
 
-public class UniqueUser: IUniqueUser
+internal class UniqueUser : IUniqueUser
 {
     private readonly IUserAccessDbContext _context;
 

@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Application.Contracts;
+﻿namespace Thread.BuildingBlocks.Application.Email;
 
 public interface IEmailSender
 {

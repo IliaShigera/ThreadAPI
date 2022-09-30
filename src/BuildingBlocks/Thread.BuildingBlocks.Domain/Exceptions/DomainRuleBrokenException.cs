@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Domain.Configuration;
+﻿namespace Thread.BuildingBlocks.Domain.Exceptions;
 
 public sealed class DomainRuleBrokenException : Exception
 {

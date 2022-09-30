@@ -1,4 +1,6 @@
-﻿using ProblemDetails = Thread.Api.Configuration.Models.ProblemDetails;
+﻿using Thread.BuildingBlocks.Application.Exceptions;
+using Thread.BuildingBlocks.Domain.Exceptions;
+using ProblemDetails = Thread.Api.Configuration.Models.ProblemDetails;
 
 namespace Thread.Api.Configuration.Middlewares;
 

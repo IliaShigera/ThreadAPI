@@ -2,11 +2,10 @@
 
 global using Thread.Modules.UserAccess.Infrastructure.Configuration;
 global using Thread.Modules.UserAccess.Application.Contracts;
-global using Thread.Modules.UserAccess.Application.Exceptions;
-global using Thread.Modules.UserAccess.Domain.Configuration;
 global using Thread.Api.Configuration.Extensions;
 global using Thread.Api.Models;
 global using Thread.Api.Start;
+global using Thread.BuildingBlocks.Infrastructure.Configuration;
 
 // others
 

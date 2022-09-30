@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Application.Configurations;
+﻿namespace Thread.BuildingBlocks.Application.Contracts;
 
 public interface IQueryHandler<in TQuery, TResult> :
     IRequestHandler<TQuery, TResult>

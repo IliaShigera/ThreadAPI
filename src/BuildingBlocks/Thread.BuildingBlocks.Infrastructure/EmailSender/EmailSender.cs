@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Infrastructure.Application;
+﻿namespace Thread.BuildingBlocks.Infrastructure.EmailSender;
 
 internal sealed class EmailSender : IEmailSender
 {

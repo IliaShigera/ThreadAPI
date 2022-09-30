@@ -1,6 +1,6 @@
-﻿namespace Thread.Modules.UserAccess.Application.Exceptions;
+﻿namespace Thread.BuildingBlocks.Application.Exceptions;
 
-public class SpecNotFoundException : Exception
+public sealed class SpecNotFoundException : Exception
 {
     public SpecNotFoundException(string details, string specName) : base(specName)
     {
