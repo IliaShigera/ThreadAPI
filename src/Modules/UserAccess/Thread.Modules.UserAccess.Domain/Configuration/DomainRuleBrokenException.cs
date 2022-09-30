@@ -1,6 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Domain.Configuration;
 
-internal sealed class DomainRuleBrokenException : Exception
+public sealed class DomainRuleBrokenException : Exception
 {
     public DomainRuleBrokenException(string details, string ruleName) : base(ruleName)
     {

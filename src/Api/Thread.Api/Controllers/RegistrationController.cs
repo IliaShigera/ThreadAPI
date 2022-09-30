@@ -1,9 +1,11 @@
-﻿namespace Thread.Api.Controllers;
+﻿using Thread.Modules.UserAccess.Application.Exceptions;
+
+namespace Thread.Api.Controllers;
 
 [ApiController]
 [AllowAnonymous]
 [Route("api/registration")]
-public class RegistrationController : ControllerBase
+public class RegistrationController : ApiController
 {
     private readonly IUserAccessModule _userAccessModule;
 
@@ -12,7 +14,7 @@ public class RegistrationController : ControllerBase
         _userAccessModule = userAccessModule;
     }
 
-    [HttpPost("")]
+    [HttpPost]
     public async Task<ActionResult> RegisterNewUserAsync(RegisterUserRequest request, CancellationToken cancellationToken)
     {
         await _userAccessModule.RegisterNewUserAsync(request.Email, request.Password, cancellationToken);

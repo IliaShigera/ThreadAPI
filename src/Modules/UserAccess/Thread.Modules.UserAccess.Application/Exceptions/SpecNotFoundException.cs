@@ -1,6 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Application.Exceptions;
 
-internal class SpecNotFoundException : Exception
+public class SpecNotFoundException : Exception
 {
     public SpecNotFoundException(string details, string specName) : base(specName)
     {
