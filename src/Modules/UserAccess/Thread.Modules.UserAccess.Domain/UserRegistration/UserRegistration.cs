@@ -6,13 +6,13 @@ public sealed class UserRegistration : Entity, IAggregateRoot
 
     private UserRegistration(string email, string passwordHash, IUniqueUser uniqueUser)
     {
-        CheckRule(new RegistrationEmailShouldBeUniqueDomainRule(email, uniqueUser));
+     //   CheckRule(new RegistrationEmailShouldBeUniqueDomainRule(email, uniqueUser));
 
         Email = email;
         PasswordHash = passwordHash;
         RegisteredOn = DateTime.UtcNow;
         Status = RegistrationStatus.WaitToConfirm;
-        
+
         AddDomainEvent(new NewUserRegisteredDomainEvent(Id, Email));
     }
 
@@ -42,5 +42,12 @@ public sealed class UserRegistration : Entity, IAggregateRoot
         Status = RegistrationStatus.Expired;
 
         AddDomainEvent(new RegistrationExpiredDomainEvent(Id));
+    }
+
+    public ApplicationUser CreateAppUserFromRegistration()
+    {
+        CheckRule(new RegistrationShouldBeConfirmed(Status));
+
+        return new(Email, PasswordHash);
     }
 }

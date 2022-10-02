@@ -3,4 +3,5 @@
 public interface IUserAccessDbContext : IDbContext
 {
     DbSet<UserRegistration> Registrations { get; }
+    DbSet<ApplicationUser> Users { get; }
 }

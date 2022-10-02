@@ -1,6 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Infrastructure.Persistence.EntityTypeConfig;
 
-public class UserRegistrationEntityTypeConfiguration : IEntityTypeConfiguration<UserRegistration>
+internal sealed class UserRegistrationEntityTypeConfiguration : IEntityTypeConfiguration<UserRegistration>
 {
     public void Configure(EntityTypeBuilder<UserRegistration> builder)
     {

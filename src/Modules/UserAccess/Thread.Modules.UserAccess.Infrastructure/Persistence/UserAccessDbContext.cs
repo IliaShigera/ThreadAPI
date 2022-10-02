@@ -11,6 +11,7 @@ internal sealed class UserAccessDbContext : DbContext, IUserAccessDbContext
     }
 
     public DbSet<UserRegistration> Registrations { get; private set; }
+    public DbSet<ApplicationUser> Users { get; private set; }
 
     public async Task CommitAsync(CancellationToken cancellationToken = default)
     {

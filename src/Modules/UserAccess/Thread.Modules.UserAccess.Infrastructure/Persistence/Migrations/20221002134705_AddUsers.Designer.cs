@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Thread.Modules.UserAccess.Infrastructure.Persistence;
 
@@ -11,9 +12,10 @@ using Thread.Modules.UserAccess.Infrastructure.Persistence;
 namespace Thread.Modules.UserAccess.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(UserAccessDbContext))]
-    partial class UserAccessDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221002134705_AddUsers")]
+    partial class AddUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
