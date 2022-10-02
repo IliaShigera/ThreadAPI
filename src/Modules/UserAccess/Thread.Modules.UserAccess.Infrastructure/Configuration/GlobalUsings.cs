@@ -6,7 +6,6 @@ global using Thread.Modules.UserAccess.Application.Contracts;
 global using Thread.Modules.UserAccess.Infrastructure.Domain;
 global using Thread.Modules.UserAccess.Infrastructure.Persistence;
 global using Thread.Modules.UserAccess.Infrastructure.Application;
-global using Thread.Modules.UserAccess.Application.Registration;
 global using Thread.BuildingBlocks.Infrastructure.DomainEventsDispatcher;
 
 // others 

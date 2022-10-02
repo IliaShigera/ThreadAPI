@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Application.Registration;
+﻿namespace Thread.Modules.UserAccess.Application.Features.Registration;
 
 internal sealed class SendConfirmationEmail : IDomainEventHandler<NewUserRegisteredDomainEvent>
 {

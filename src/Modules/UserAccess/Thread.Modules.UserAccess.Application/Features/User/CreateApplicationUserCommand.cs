@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Application.User;
+﻿namespace Thread.Modules.UserAccess.Application.Features.User;
 
 internal sealed class CreateApplicationUserCommand : IDomainEventHandler<RegistrationConfirmedDomainEvent>
 {

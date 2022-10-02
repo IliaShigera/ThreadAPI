@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Application.Registration;
+﻿namespace Thread.Modules.UserAccess.Application.Features.Registration;
 
 public sealed class ConfirmRegistrationCommand : ICommand
 {

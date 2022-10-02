@@ -1,4 +1,6 @@
-﻿namespace Thread.Modules.UserAccess.Infrastructure.Application;
+﻿using Thread.Modules.UserAccess.Application.Features.Registration;
+
+namespace Thread.Modules.UserAccess.Infrastructure.Application;
 
 internal sealed class UserAccessModule : IUserAccessModule
 {
