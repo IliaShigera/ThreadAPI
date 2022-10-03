@@ -8,4 +8,11 @@ internal static class ApplicationBuilderExtensions
     {
         return app.UseMiddleware<ExceptionHandlerMiddleware>();
     }
+
+    internal static IApplicationBuilder UseSwaggerDoc(this IApplicationBuilder app)
+    {
+        return app
+            .UseSwagger()
+            .UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Thread API V1"));
+    }
 }
