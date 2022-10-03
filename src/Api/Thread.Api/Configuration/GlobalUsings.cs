@@ -11,8 +11,12 @@ global using Thread.BuildingBlocks.Infrastructure.Configuration;
 
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.IdentityModel.Tokens;
+global using Microsoft.OpenApi.Models;
 global using Newtonsoft.Json;
 global using Serilog;
 global using Serilog.Core;
 global using Serilog.Events;
 global using Serilog.Formatting.Json;
+global using System.Text;
