@@ -1,6 +1,4 @@
-﻿using Thread.Modules.UserAccess.Application.Features.Registration;
-
-namespace Thread.Modules.UserAccess.Infrastructure.Application;
+﻿namespace Thread.Modules.UserAccess.Infrastructure.Application;
 
 internal sealed class UserAccessModule : IUserAccessModule
 {
@@ -19,5 +17,10 @@ internal sealed class UserAccessModule : IUserAccessModule
     public async Task ConfirmRegistrationAsync(Guid registrationId, CancellationToken cancellationToken = default)
     {
         await _mediator.Send(new ConfirmRegistrationCommand(registrationId), cancellationToken);
+    }
+
+    public async Task<AuthResultDto> GetAuthTokenAsync(string email, string password, CancellationToken cancellationToken = default)
+    {
+        return await _mediator.Send(new GetAuthTokenQuery(email, password), cancellationToken);
     }
 }
