@@ -1,9 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using Microsoft.IdentityModel.Tokens;
-
-namespace Thread.Modules.UserAccess.Infrastructure.Application;
+﻿namespace Thread.Modules.UserAccess.Infrastructure.Application;
 
 internal sealed class JwtAuthClaimsService : ITokenClaimsService
 {

@@ -1,4 +1,4 @@
-﻿namespace Thread.BuildingBlocks.Domain.Contracts;
+﻿namespace Thread.BuildingBlocks.Domain.Models;
 
 public abstract class Entity
 {
@@ -15,7 +15,6 @@ public abstract class Entity
     protected void CheckRule(IDomainRule rule)
     {
         if (rule.IsBroken())
-            throw new DomainRuleBrokenException(rule.Details, nameof(rule));
+            throw new DomainRuleBrokenException(rule.Details, rule.GetType().Name);
     }
-
 }

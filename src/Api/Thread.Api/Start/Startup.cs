@@ -1,4 +1,7 @@
-﻿namespace Thread.Api.Start;
+﻿using Thread.BuildingBlocks.Infrastructure;
+using Thread.Modules.UserAccess.Infrastructure;
+
+namespace Thread.Api.Start;
 
 internal static class Startup
 {

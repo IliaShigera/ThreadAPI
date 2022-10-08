@@ -3,8 +3,8 @@
 internal sealed class ProblemDetails
 {
     private ProblemDetails() { }
-    
-    public ProblemDetails(string? title, string? details, int? code)
+
+    internal ProblemDetails(string? title, string? details, int? code)
     {
         Title = title;
         Details = details;

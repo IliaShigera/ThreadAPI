@@ -1,4 +1,4 @@
-﻿namespace Thread.Modules.UserAccess.Infrastructure.Configuration;
+﻿namespace Thread.Modules.UserAccess.Infrastructure;
 
 public static class DependencyInjection
 {

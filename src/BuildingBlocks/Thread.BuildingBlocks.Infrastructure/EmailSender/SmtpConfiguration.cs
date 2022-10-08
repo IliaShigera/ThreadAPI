@@ -1,8 +1,8 @@
 ﻿namespace Thread.BuildingBlocks.Infrastructure.EmailSender;
 
-internal sealed class SmtpConfiguration
+public sealed class SmtpConfiguration
 {
-    internal const string SECTION_NAME = "SmtpConfig";
+    public const string SECTION_NAME = "SmtpConfig";
     
     public string Host { get; set; }
     public int Port { get; set; }

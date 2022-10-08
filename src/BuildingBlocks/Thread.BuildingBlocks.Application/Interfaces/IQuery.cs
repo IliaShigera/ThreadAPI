@@ -1,4 +1,4 @@
-﻿namespace Thread.BuildingBlocks.Application.Contracts;
+﻿namespace Thread.BuildingBlocks.Application.Interfaces;
 
 public interface IQuery<out TResult> : IRequest<TResult>
 {

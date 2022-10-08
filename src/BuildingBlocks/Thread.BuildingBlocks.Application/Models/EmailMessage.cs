@@ -1,4 +1,4 @@
-﻿namespace Thread.BuildingBlocks.Application.Email;
+﻿namespace Thread.BuildingBlocks.Application.Models;
 
 public struct EmailMessage
 {

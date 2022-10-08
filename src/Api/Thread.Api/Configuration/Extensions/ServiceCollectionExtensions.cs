@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
-
-namespace Thread.Api.Configuration.Extensions;
+﻿namespace Thread.Api.Configuration.Extensions;
 
 internal static class ServiceCollectionExtensions
 {

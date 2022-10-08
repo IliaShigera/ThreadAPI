@@ -1,4 +1,4 @@
-﻿namespace Thread.BuildingBlocks.Domain.Contracts;
+﻿namespace Thread.BuildingBlocks.Domain.Models;
 
 public abstract class ValueObject
 {

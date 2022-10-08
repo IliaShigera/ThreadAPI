@@ -16,7 +16,6 @@ public class RegistrationController : ApiController
     public async Task<ActionResult> RegisterNewUserAsync(RegisterUserRequest request, CancellationToken cancellationToken)
     {
         await _userAccessModule.RegisterNewUserAsync(request.Email, request.Password, cancellationToken);
-
         return Ok();
     }
 
@@ -24,7 +23,6 @@ public class RegistrationController : ApiController
     public async Task<ActionResult> ConfirmRegistrationAsync([FromRoute] Guid registrationId, CancellationToken cancellationToken)
     {
         await _userAccessModule.ConfirmRegistrationAsync(registrationId, cancellationToken);
-
         return Ok();
     }
 }

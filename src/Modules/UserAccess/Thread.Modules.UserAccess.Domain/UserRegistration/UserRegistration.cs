@@ -6,7 +6,7 @@ public sealed class UserRegistration : Entity, IAggregateRoot
 
     private UserRegistration(string email, string passwordHash, IUniqueUser uniqueUser)
     {
-     //   CheckRule(new RegistrationEmailShouldBeUniqueDomainRule(email, uniqueUser));
+        CheckRule(new RegistrationEmailShouldBeUniqueDomainRule(email, uniqueUser));
 
         Email = email;
         PasswordHash = passwordHash;

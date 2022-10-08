@@ -16,7 +16,6 @@ public class AuthController : ApiController
     public async Task<ActionResult> GetNewAuthTokenAsync([FromQuery] GetAuthTokenRequest request, CancellationToken cancellationToken)
     {
         var result = await _userAccessModule.GetAuthTokenAsync(request.Email, request.Password, cancellationToken);
-
         return Ok(result);
     }
 }

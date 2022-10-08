@@ -1,4 +1,4 @@
-﻿namespace Thread.BuildingBlocks.Domain.Contracts;
+﻿namespace Thread.BuildingBlocks.Domain.Interfaces;
 
 public interface IDomainRule
 {

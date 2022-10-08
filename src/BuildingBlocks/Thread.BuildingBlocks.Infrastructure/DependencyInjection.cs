@@ -1,4 +1,6 @@
-﻿namespace Thread.BuildingBlocks.Infrastructure.Configuration;
+﻿using Thread.BuildingBlocks.Infrastructure.EmailSender;
+
+namespace Thread.BuildingBlocks.Infrastructure;
 
 public static class DependencyInjection
 {

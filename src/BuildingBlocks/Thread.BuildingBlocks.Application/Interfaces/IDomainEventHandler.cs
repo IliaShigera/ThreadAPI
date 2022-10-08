@@ -1,4 +1,6 @@
-﻿namespace Thread.BuildingBlocks.Application.Contracts;
+﻿using Thread.BuildingBlocks.Domain.Interfaces;
+
+namespace Thread.BuildingBlocks.Application.Interfaces;
 
 public interface IDomainEventHandler<in TDomainEvent> : 
     INotificationHandler<TDomainEvent>
