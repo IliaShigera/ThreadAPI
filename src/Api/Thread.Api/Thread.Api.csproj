@@ -20,4 +20,10 @@
       <ProjectReference Include="..\..\Modules\UserAccess\Thread.Modules.UserAccess.Infrastructure\Thread.Modules.UserAccess.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="AppSettings\appsettings.Development.json" />
+      <_ContentIncludedByDefault Remove="AppSettings\appsettings.Production.json" />
+      <_ContentIncludedByDefault Remove="AppSettings\appsettings.Test.json" />
+    </ItemGroup>
+
 </Project>
