@@ -18,6 +18,10 @@ internal sealed class UserRegistrationEntityTypeConfiguration : IEntityTypeConfi
             .IsRequired()
             .HasMaxLength(100);
         
+        builder.Property(r => r.ConfirmationToken)
+            .IsRequired()
+            .HasMaxLength(100);
+        
         builder.Property(r => r.RegisteredOn).IsRequired();
 
         builder.Ignore(r => r.DomainEvents);

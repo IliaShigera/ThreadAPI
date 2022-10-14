@@ -11,14 +11,16 @@ public sealed class UserRegistration : Entity, IAggregateRoot
         Email = email;
         PasswordHash = passwordHash;
         RegisteredOn = DateTime.UtcNow;
+        ConfirmationToken = Guid.NewGuid().ToString();
         Status = RegistrationStatus.WaitToConfirm;
 
-        AddDomainEvent(new NewUserRegisteredDomainEvent(Id, Email));
+        AddDomainEvent(new NewUserRegisteredDomainEvent(Email, ConfirmationToken));
     }
 
     public string Email { get; init; }
     public string PasswordHash { get; init; }
-    public DateTime RegisteredOn { get; init; }
+    public string ConfirmationToken { get; init; } 
+    public DateTime RegisteredOn { get; init; } 
     public RegistrationStatus Status { get; private set; }
 
     public static UserRegistration RegisterNewUser(string email, string passwordHash, IUniqueUser uniqueUser) =>

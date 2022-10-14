@@ -12,7 +12,7 @@ internal sealed class SendConfirmationEmail : IDomainEventHandler<NewUserRegiste
     public async Task Handle(NewUserRegisteredDomainEvent @event, CancellationToken cancellationToken)
     {
         // todo: create link from configuration
-        var link = $"<a href=\"{@event.RegistrationId}\">link</a>";
+        var link = $"<a href=\"{@event.ConfirmationToken}\">link</a>";
         var content = $"Welcome to Thread application! Please confirm your registration using this {link}.";
         var subject = "Thread - Please confirm your registration.";
 
