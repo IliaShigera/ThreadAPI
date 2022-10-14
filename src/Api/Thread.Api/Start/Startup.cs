@@ -1,7 +1,4 @@
-﻿using Thread.BuildingBlocks.Infrastructure;
-using Thread.Modules.UserAccess.Infrastructure;
-
-namespace Thread.Api.Start;
+﻿namespace Thread.Api.Start;
 
 internal static class Startup
 {
@@ -20,6 +17,12 @@ internal static class Startup
         host.UseSerilog();
     }
 
+    internal static void ConfigureWebHost(ConfigureWebHostBuilder webHost, IConfiguration configuration)
+    {
+        var url = configuration.GetSection("WebHost:ApplicationUrl").Value ?? throw  new ArgumentException("Settings not found.");
+        webHost.UseUrls(url);
+    }
+    
     internal static void ConfigureServices(IServiceCollection services, IConfiguration configuration)
     {
         services.AddBuildingBlocks(configuration);
