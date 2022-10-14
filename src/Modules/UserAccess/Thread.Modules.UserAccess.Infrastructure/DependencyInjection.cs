@@ -9,7 +9,9 @@ public static class DependencyInjection
         services.AddScoped<IPasswordManager, PasswordManager>();
         services.AddScoped<IUserAccessModule, UserAccessModule>();
         services.AddScoped<ITokenClaimsService, JwtAuthClaimsService>();
+        
         services.AddSingleton(configuration.GetSection(AuthorizationConfiguration.SECTION_NAME).Get<AuthorizationConfiguration>());
+        services.AddSingleton(configuration.GetSection(LinkConfiguration.SECTION_NAME).Get<LinkConfiguration>());
 
         var connection = configuration.GetConnectionString("UserAccess");
         services.AddDbContext<UserAccessDbContext>(options => options.UseSqlServer(connection));
