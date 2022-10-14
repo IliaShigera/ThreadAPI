@@ -9,6 +9,7 @@ public static class DependencyInjection
         services.AddScoped<IPasswordManager, PasswordManager>();
         services.AddScoped<IUserAccessModule, UserAccessModule>();
         services.AddScoped<ITokenClaimsService, JwtAuthClaimsService>();
+        services.AddScoped<ILinkProvider, LinkProvider>();
         
         services.AddSingleton(configuration.GetSection(AuthorizationConfiguration.SECTION_NAME).Get<AuthorizationConfiguration>());
         services.AddSingleton(configuration.GetSection(LinkConfiguration.SECTION_NAME).Get<LinkConfiguration>());
