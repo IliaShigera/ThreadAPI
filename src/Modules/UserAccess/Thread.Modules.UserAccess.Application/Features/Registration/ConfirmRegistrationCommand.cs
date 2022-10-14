@@ -1,14 +1,6 @@
 ﻿namespace Thread.Modules.UserAccess.Application.Features.Registration;
 
-public sealed class ConfirmRegistrationCommand : ICommand
-{
-    public ConfirmRegistrationCommand(Guid registrationId)
-    {
-        RegistrationId = registrationId;
-    }
-
-    public Guid RegistrationId { get; }
-}
+public sealed record ConfirmRegistrationCommand(string ConfirmationToken) : ICommand;
 
 internal sealed class ConfirmRegistrationCommandHandler : ICommandHandler<ConfirmRegistrationCommand>
 {
@@ -22,10 +14,10 @@ internal sealed class ConfirmRegistrationCommandHandler : ICommandHandler<Confir
     public async Task<Unit> Handle(ConfirmRegistrationCommand command, CancellationToken cancellationToken)
     {
         var registration = await _dbContext.Registrations
-            .FirstOrDefaultAsync(x => x.Id == command.RegistrationId, cancellationToken);
+            .FirstOrDefaultAsync(x => x.ConfirmationToken.Equals(command.ConfirmationToken), cancellationToken);
 
         if (registration is null)
-            throw new SpecNotFoundException($"Registration with id: {command.RegistrationId} not exists.", nameof(Registration));
+            throw new SpecNotFoundException($"Registration token: {command.ConfirmationToken} is invalid.", nameof(Registration));
 
         registration.Confirm();
 

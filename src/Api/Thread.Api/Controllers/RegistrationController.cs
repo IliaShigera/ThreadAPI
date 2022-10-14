@@ -19,10 +19,10 @@ public class RegistrationController : ApiController
         return Ok();
     }
 
-    [HttpPatch("{registrationId:guid}")]
-    public async Task<ActionResult> ConfirmRegistrationAsync([FromRoute] Guid registrationId, CancellationToken cancellationToken)
+    [HttpPatch("{registrationId}")]
+    public async Task<ActionResult> ConfirmRegistrationAsync([FromRoute] string confirmationToken, CancellationToken cancellationToken)
     {
-        await _userAccessModule.ConfirmRegistrationAsync(registrationId, cancellationToken);
+        await _userAccessModule.ConfirmRegistrationAsync(confirmationToken, cancellationToken);
         return Ok();
     }
 }
