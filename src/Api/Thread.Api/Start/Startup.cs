@@ -28,6 +28,7 @@ internal static class Startup
         services.AddBuildingBlocks(configuration);
         services.AddUserAccessModule(configuration);
         services.AddJwtAuth(configuration);
+        services.AddCurrentUserAccessor();
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerDoc();

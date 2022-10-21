@@ -55,4 +55,11 @@ internal static class ServiceCollectionExtensions
                 };
             });
     }
+
+    internal static IServiceCollection AddCurrentUserAccessor(this IServiceCollection services)
+    {
+        services.AddHttpContextAccessor();
+        services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+        return services.AddScoped<ICurrentUserAccessor, CurrentUserAccessor>();
+    }
 }
