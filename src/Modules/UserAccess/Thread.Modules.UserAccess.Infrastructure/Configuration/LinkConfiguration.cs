@@ -2,7 +2,5 @@
 
 internal sealed class LinkConfiguration
 {
-    internal const string SECTION_NAME = "LinkConfig";
-
-    public string ApiUri { get; set; }
+    public string ApiUri { get; } = HostEnvironment.Uri;
 }

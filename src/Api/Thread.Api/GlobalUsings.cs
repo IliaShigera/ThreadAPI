@@ -6,9 +6,11 @@ global using Thread.Api.Configuration.Extensions;
 global using Thread.Modules.UserAccess.Application.Exceptions;
 global using Thread.Modules.UserAccess.Application.Contracts;
 global using Thread.Modules.UserAccess.Infrastructure;
+global using Thread.Modules.UserAccess.Infrastructure.Persistence.Extensions;
 global using Thread.BuildingBlocks.Application.Exceptions;
 global using Thread.BuildingBlocks.Domain.Exceptions;
 global using Thread.BuildingBlocks.Infrastructure;
+global using Thread.BuildingBlocks.Infrastructure.Model;
 
 // others
 global using Microsoft.AspNetCore.Mvc;

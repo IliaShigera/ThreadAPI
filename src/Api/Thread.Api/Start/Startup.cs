@@ -17,9 +17,9 @@ internal static class Startup
         host.UseSerilog();
     }
 
-    internal static void ConfigureWebHost(ConfigureWebHostBuilder webHost, IConfiguration configuration)
+    internal static void ConfigureWebHost(ConfigureWebHostBuilder webHost)
     {
-        var url = configuration.GetSection("WebHost:ApplicationUrl").Value ?? throw  new ArgumentException("Settings not found.");
+        var url = HostEnvironment.Uri ?? throw  new ArgumentException("Settings not found.");
         webHost.UseUrls(url);
     }
     

@@ -12,11 +12,11 @@ public static class DependencyInjection
         services.AddScoped<ILinkProvider, LinkProvider>();
         
         services.AddSingleton(configuration.GetSection(AuthorizationConfiguration.SECTION_NAME).Get<AuthorizationConfiguration>());
-        services.AddSingleton(configuration.GetSection(LinkConfiguration.SECTION_NAME).Get<LinkConfiguration>());
+        services.AddSingleton<LinkConfiguration>();
 
         var connection = configuration.GetConnectionString("UserAccess");
-        services.AddDbContext<UserAccessDbContext>(options => options.UseSqlServer(connection));
-
+        services.AddUserAccessDbContextDependingOnTheEnvironment(connection);
+        
         services.AddMediatR(
             Assembly.Load("Thread.Modules.UserAccess.Application"),
             Assembly.Load("Thread.Modules.UserAccess.Infrastructure"));

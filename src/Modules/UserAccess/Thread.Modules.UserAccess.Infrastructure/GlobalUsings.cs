@@ -4,12 +4,14 @@ global using Thread.Modules.UserAccess.Domain.AppUser;
 global using Thread.Modules.UserAccess.Domain.UserRegistration;
 global using Thread.Modules.UserAccess.Infrastructure.Domain;
 global using Thread.Modules.UserAccess.Infrastructure.Persistence;
+global using Thread.Modules.UserAccess.Infrastructure.Persistence.Extensions;
 global using Thread.Modules.UserAccess.Infrastructure.Application;
 global using Thread.Modules.UserAccess.Infrastructure.Configuration;
 global using Thread.Modules.UserAccess.Application.Contracts;
 global using Thread.Modules.UserAccess.Application.Features.Auth;
 global using Thread.Modules.UserAccess.Application.Features.Registration;
 global using Thread.BuildingBlocks.Infrastructure.DomainEventsDispatcher;
+global using Thread.BuildingBlocks.Infrastructure.Model;
 
 // others 
 global using Microsoft.EntityFrameworkCore;
